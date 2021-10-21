@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-28T01:13:30.092Z</updated>
+  <updated>2021-10-21T06:53:21.265Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图片隐写</title>
+    <link href="http://example.com/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/"/>
+    <id>http://example.com/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/</id>
+    <published>2021-10-21T06:09:12.000Z</published>
+    <updated>2021-10-21T06:53:21.265Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;misc可以说真的是“人如其名”，又杂又乱。我在看完关于图片隐写的一些视频后，去做了一些题目（来自buu），遇到了一些恶心人的小细节，在这里发表一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="misc" scheme="http://example.com/categories/misc/"/>
+    
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>C语言学习的成果</title>
@@ -49,7 +70,7 @@
       
         
         
-    <summary type="html">&lt;h4 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h4 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot;</summary>
         
       
     
