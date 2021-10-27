@@ -8,7 +8,7 @@
   
   
   <title>
-    图片隐写 |
+    各种编码的转化 |
     
     Hexo
   </title>
@@ -32,7 +32,7 @@
 <body>
   <main class="content">
     <section class="outer">
-  <article id="post-图片隐写" class="article article-type-post" itemscope
+  <article id="post-各种编码的转化" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -41,7 +41,7 @@
       
 
 <h1 class="article-title" itemprop="name">
-  图片隐写
+  各种编码的转化
 </h1>
 
 
@@ -51,8 +51,8 @@
 
     
     <div class="article-meta">
-      <a href="/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/" class="article-date">
-  <time datetime="2021-10-21T06:09:12.000Z" itemprop="datePublished">2021-10-21</time>
+      <a href="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/" class="article-date">
+  <time datetime="2021-10-27T10:33:55.000Z" itemprop="datePublished">2021-10-27</time>
 </a>
       
 <div class="article-category">
@@ -70,14 +70,19 @@
       
       
       
-      <p>misc可以说真的是“人如其名”，又杂又乱。我在看完关于图片隐写的一些视频后，去做了一些题目（来自buu），遇到了一些恶心人的小细节，在这里发表一下。</p>
+      <p>经过有一段时间的misc的题目的了解，我发现了misc中乱七八糟的进制转化，什么base套娃之类的。还有，我发现了二进制可以转万物，一些进制可以转图片等等。现在就来记录一些最近的一些发现。</p>
 <span id="more"></span>
-<p>1、首先说一下buu上面有一题，就是给你一张图片，内容是大白（不知道为什么这道题的大白图片发不上来），我立马用010打开了图片，很遗憾并未发现什么，于是我想到了视频中说的更改图片大小的方法，同样用010打开图片，就会出现下图<br><img src="/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(6).png"><br>然后在IHDR那边更改图片大小就行了。这时，第一个恶心的点就出来了，千万不要去改width，改height就可以了，不然。。。<br>2、其次是buu上面的二维码<br><img src="/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/QR_code.png"><br>相信很多朋友第一反应一定和我一样，拿出手机扫，然后就会得到”secret is here”这句话，是不是很气，然后我又把它放进010，发现还是什么都没有，于是乎我就尝试改图片，然而依旧没用，在我百思不得其解的时候，我想到学姐开学展示的图片分离，所以我觉得试试，于是我用虚拟机运行binwalk，果然发现图片里面藏着一个压缩包，这是我之前都不敢想的，图片里居然藏着压缩包，但是，压缩包居然需要密码，还是数字密码，我就直接裂开，因为从头到尾没有看到任何一个数字，最后在我询问了度娘之后，我知道了，有一种工具叫做爆破工具，就是用来爆破这些弱密码的，然后我就使用AZPR这个工具得到了密码<br>3、最后，经过刷这一些题的经验，我了解到了misc的覆盖面有多大，我也充分体会到了学姐和我说的“刷的越多，你就越强”。接下来我会继续努力，早日成为大佬。哈哈哈。</p>
+<ol>
+<li>一号选手是buu中的N种方法解决，呵呵呵，确实是可以有N种，但是我什么都不会。首先题目下载下来是一个.exe文件，当然是先运行一下，发现运行不了<br><img src="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/2.png"><br>这是，misc的最好帮手010就该出场了，然后你会发现开头有什么.png，base 64，<br><img src="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/3.png"><br>这思路一下就有了嘛，找一个网站，我用的是the-x，<br><img src="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/4.png"><br>然后把图片下载就发现是一个二维码。这样就做完了。然后就是我的第一个结论，不管什么文件，先用010打开看看。泪目。</li>
+<li>接下来是所谓的二进制转万物了。这个还是非常的有趣的，二进制可以转ascii码，二维码，图片等等等等。反正牛的很。<br>首先给大家分享一下一个python代码，<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">from PIL import Image</span><br><span class="line">MAX = 25</span><br><span class="line">pic = Image.new(<span class="string">&quot;RGB&quot;</span>,(MAX, MAX))</span><br><span class="line">str = <span class="string">&quot;得到的二进制数字&quot;</span></span><br><span class="line">i=0</span><br><span class="line"><span class="keyword">for</span> y <span class="keyword">in</span> range (0,MAX):</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range (0,MAX):</span><br><span class="line">        <span class="keyword">if</span>(str[i] == <span class="string">&#x27;1&#x27;</span>):</span><br><span class="line">            pic.putpixel([x,y],(0, 0, 0))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            pic.putpixel([x,y],(255,255,255))</span><br><span class="line">        i = i+1</span><br><span class="line">pic.show()</span><br><span class="line">pic.save(<span class="string">&quot;flag.png&quot;</span>)``</span><br></pre></td></tr></table></figure>
+这个就是把二进制转为二维码的一个代码了。</li>
+<li>还有就是二进制转图片，这个稍微复杂我觉得。首先当你得确定这个二进制是不是要转为图片，这个就是misc的超级大脑洞了。如果需要的话，得先把二进制转为十六进制，这种工具网上一大堆。然后再把转化完的十六进制码放到十六进制编译器里，我用的是winhex，然后通过文件头尾判断是上面文件，然后保存为一个对应的文件，打开就欧克了。<br>最后我想说，misc所需要的脑洞真的打的离谱，出题人可能把flag放在任何一个地方，这就是最恐怖的地方了。不过越挑战就越快乐。说实话，刷题确实快乐。misc中的进制转化还有很多，我还在探索，这些都是比较基础的，注意的就是要记清楚各种常见的编码的特点。保证能很快知道是什么编码，才能最快的知道要进行什么操作。我还要加油，任重道远。</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/" data-id="ckv9f9ziq0004lktd70sx4tdn" class="article-share-link">
+      <a data-url="http://example.com/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/" data-id="ckv9f9zis0006lktd77du4lr2" class="article-share-link">
         Share
       </a>
       
@@ -91,19 +96,10 @@
   
 <nav class="article-nav">
   
-  <a href="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/" class="article-nav-link">
-    <strong class="article-nav-caption">Newer</strong>
-    <div class="article-nav-title">
-      
-      各种编码的转化
-      
-    </div>
-  </a>
   
-  
-  <a href="/2021/09/25/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%90%E6%9E%9C-1/" class="article-nav-link">
+  <a href="/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/" class="article-nav-link">
     <strong class="article-nav-caption">Older</strong>
-    <div class="article-nav-title">C语言学习的成果</div>
+    <div class="article-nav-title">图片隐写</div>
   </a>
   
 </nav>
