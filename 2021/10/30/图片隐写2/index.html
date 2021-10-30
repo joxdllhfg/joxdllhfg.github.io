@@ -22,7 +22,7 @@
 
   
 
-  <title>C语言学习的成果 | Hexo</title>
+  <title>图片隐写2 | Hexo</title>
 
   
 
@@ -97,15 +97,15 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">C语言学习的成果</h1>
+          <h1 class="title-wrap">图片隐写2</h1>
           <h2 class="title-sub-wrap">
             <strong>John Doe</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-09-25T04:41:56.000Z" itemprop="datePublished">2021-09-25</time>
+            <time  class="article-date" datetime="2021-10-30T04:41:31.000Z" itemprop="datePublished">2021-10-30</time>
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/%E5%AD%A6%E4%B9%A0/">📒 学习</a></li>
+    <li><a href="/categories/misc/">📒 misc</a></li>
   
 </ul>
           <ul class="wrap-list dark">
@@ -136,17 +136,9 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>####通过这一段时间对C语言的学习，我体会到了编程的魔力，例如：一个经典的问题，叫“八皇后问题”，我们手动去解决这个问题是十分困难的，而使用编程的话，只需要0.1s，这是难以想象的，也使我对C有了更大的好奇。接下来，我将分享一些我的学习成果。</p>
+        <p>今天又来分享misc的图片隐写了，果然刷的越多，你就越难受，太杂了。</p>
 <span id="more"></span>
-<p>1.我接触C的第一个任务就是让计算机说你要它说的话，例如“就这样虚度年华”，这时，你就需要一个单词printf，并写下面的指令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">          <span class="built_in">printf</span>(<span class="string">&quot;就这样虚度年华&quot;</span>);</span><br><span class="line">          <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样就可以在计算机上输出我们就这样虚度年华了，是不是很哇塞！<br>2.上述的指令，并不是简简单单的printf(“就这样虚度年华”)，是因为如果只是输入这个指令，计算机是无法识别的，于是就有了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">          <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这是一种简单的框架，确实C语言必不可少的，就像一个平台一样，让C可以放肆运行，而C语言的结构我就不多提了。<br>3.我是一个比较爱胡思乱想的人，我就觉得，让计算机只说一遍没意思，于是我就去搜了一下，就知道了这个代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">while</span>(1&gt;0)</span><br><span class="line">&#123;</span><br><span class="line">         <span class="built_in">printf</span>(<span class="string">&quot;就只有虚度年华&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>把这个代码加到框架里，你的计算机就会一直的重复这句话了。<br>4.最后也是我学到的一种程序，有兴趣的朋友可以去运行看看，说不定有惊喜。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">          system(<span class="string">&quot;color 0a&quot;</span>);</span><br><span class="line">          <span class="keyword">while</span>(1&gt;0)</span><br><span class="line">          &#123;</span><br><span class="line">                   <span class="built_in">printf</span>(<span class="string">&quot;0 1&quot;</span>);</span><br><span class="line">          &#125;</span><br><span class="line">          system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">          <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上就是这篇博客的主要内容，敬请指正。</p>
+<p>1.首先讲一下面具下的flag这一题，这题比之前的题目要复杂一些，首先下载文件，得到一张图片<br><img src="/2021/10/30/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%992/1.jpg"><br>很经典的日漫电影，你的名字，用010打开，发现有一个.zip文件，使用foremost分离，打开压缩包，发现有两个.txt文件<br><img src="/2021/10/30/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%992/2.jpg"><br>然后打开文件<br><img src="/2021/10/30/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%992/3.jpg"><br><img src="/2021/10/30/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%992/4.jpg"><br>显而易见，一个是okk，一个是brainkfuck，用在线工具解密后就可以得到flag了</p>
 
       </section>
 
@@ -154,28 +146,14 @@
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">图片隐写</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/09/25/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%90%E6%9E%9C-1/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">C语言学习的成果</h2>
+        <a href="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">各种编码的转化</h2>
         </a>
       
       <div class="card-text--row">Older</div>
