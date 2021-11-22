@@ -22,7 +22,7 @@
 
   
 
-  <title>图片隐写 | Hexo</title>
+  <title>数据库 | Hexo</title>
 
   
 
@@ -97,15 +97,15 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">图片隐写</h1>
+          <h1 class="title-wrap">数据库</h1>
           <h2 class="title-sub-wrap">
             <strong>John Doe</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-10-21T06:09:12.000Z" itemprop="datePublished">2021-10-21</time>
+            <time  class="article-date" datetime="2021-11-20T14:19:49.000Z" itemprop="datePublished">2021-11-20</time>
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/misc/">📒 misc</a></li>
+    <li><a href="/categories/Mysql/">📒 Mysql</a></li>
   
 </ul>
           <ul class="wrap-list dark">
@@ -136,9 +136,9 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>misc可以说真的是“人如其名”，又杂又乱。我在看完关于图片隐写的一些视频后，去做了一些题目（来自buu），遇到了一些恶心人的小细节，在这里发表一下。</p>
+        <p>终于是开始了Mysql的部分了，好心累</p>
 <span id="more"></span>
-<p>1、首先说一下buu上面有一题，就是给你一张图片，内容是大白（不知道为什么这道题的大白图片发不上来），我立马用010打开了图片，很遗憾并未发现什么，于是我想到了视频中说的更改图片大小的方法，同样用010打开图片，就会出现下图<br><img src="/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE(6).png"><br>然后在IHDR那边更改图片大小就行了。这时，第一个恶心的点就出来了，千万不要去改width，改height就可以了，不然。。。<br>2、其次是buu上面的二维码<br><img src="/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/QR_code.png"><br>相信很多朋友第一反应一定和我一样，拿出手机扫，然后就会得到”secret is here”这句话，是不是很气，然后我又把它放进010，发现还是什么都没有，于是乎我就尝试改图片，然而依旧没用，在我百思不得其解的时候，我想到学姐开学展示的图片分离，所以我觉得试试，于是我用虚拟机运行binwalk，果然发现图片里面藏着一个压缩包，这是我之前都不敢想的，图片里居然藏着压缩包，但是，压缩包居然需要密码，还是数字密码，我就直接裂开，因为从头到尾没有看到任何一个数字，最后在我询问了度娘之后，我知道了，有一种工具叫做爆破工具，就是用来爆破这些弱密码的，然后我就使用AZPR这个工具得到了密码<br>3、最后，经过刷这一些题的经验，我了解到了misc的覆盖面有多大，我也充分体会到了学姐和我说的“刷的越多，你就越强”。接下来我会继续努力，早日成为大佬。哈哈哈。</p>
+<p>数据库基础<br>1.Mysql的基础操作<br>登录数据库，查看库名，创建、删除、使用库，以及创建表<br>2.Mysql表的一些基础操作<br>增：Insert<br>删：Delete<br>改：Updata<br>查：Select<br>3.Mysql常用的变量名<br>Database()   //查看当前数据库名<br>User()          //用户<br>Version()     //mysql版本<br>…..</p>
 
       </section>
 
@@ -146,28 +146,14 @@
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">各种编码的转化</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/09/25/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%90%E6%9E%9C-1/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">C语言学习的成果</h2>
+        <a href="/2021/11/14/PHP1/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">PHP1</h2>
         </a>
       
       <div class="card-text--row">Older</div>
