@@ -22,7 +22,7 @@
 
   
 
-  <title>各种编码的转化 | Hexo</title>
+  <title>PHP1 | Hexo</title>
 
   
 
@@ -97,15 +97,15 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">各种编码的转化</h1>
+          <h1 class="title-wrap">PHP1</h1>
           <h2 class="title-sub-wrap">
             <strong>John Doe</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-10-27T10:33:55.000Z" itemprop="datePublished">2021-10-27</time>
+            <time  class="article-date" datetime="2021-11-14T14:45:00.000Z" itemprop="datePublished">2021-11-14</time>
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/misc/">📒 misc</a></li>
+    <li><a href="/categories/PHP/">📒 PHP</a></li>
   
 </ul>
           <ul class="wrap-list dark">
@@ -136,14 +136,20 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>经过有一段时间的misc的题目的了解，我发现了misc中乱七八糟的进制转化，什么base套娃之类的。还有，我发现了二进制可以转万物，一些进制可以转图片等等。现在就来记录一些最近的一些发现。</p>
+        <p>终于开始学习PHP了，以下是一下内容总结，主要是为了自己翻看。</p>
 <span id="more"></span>
+
 <ol>
-<li>一号选手是buu中的N种方法解决，呵呵呵，确实是可以有N种，但是我什么都不会。首先题目下载下来是一个.exe文件，当然是先运行一下，发现运行不了<br><img src="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/2.png"><br>这是，misc的最好帮手010就该出场了，然后你会发现开头有什么.png，base 64，<br><img src="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/3.png"><br>这思路一下就有了嘛，找一个网站，我用的是the-x，<br><img src="/2021/10/27/%E5%90%84%E7%A7%8D%E7%BC%96%E7%A0%81%E7%9A%84%E8%BD%AC%E5%8C%96/4.png"><br>然后把图片下载就发现是一个二维码。这样就做完了。然后就是我的第一个结论，不管什么文件，先用010打开看看。泪目。</li>
-<li>接下来是所谓的二进制转万物了。这个还是非常的有趣的，二进制可以转ascii码，二维码，图片等等等等。反正牛的很。<br>首先给大家分享一下一个python代码，<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">from PIL import Image</span><br><span class="line">MAX = 25</span><br><span class="line">pic = Image.new(<span class="string">&quot;RGB&quot;</span>,(MAX, MAX))</span><br><span class="line">str = <span class="string">&quot;得到的二进制数字&quot;</span></span><br><span class="line">i=0</span><br><span class="line"><span class="keyword">for</span> y <span class="keyword">in</span> range (0,MAX):</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range (0,MAX):</span><br><span class="line">        <span class="keyword">if</span>(str[i] == <span class="string">&#x27;1&#x27;</span>):</span><br><span class="line">            pic.putpixel([x,y],(0, 0, 0))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            pic.putpixel([x,y],(255,255,255))</span><br><span class="line">        i = i+1</span><br><span class="line">pic.show()</span><br><span class="line">pic.save(<span class="string">&quot;flag.png&quot;</span>)``</span><br></pre></td></tr></table></figure>
-这个就是把二进制转为二维码的一个代码了。</li>
-<li>还有就是二进制转图片，这个稍微复杂我觉得。首先当你得确定这个二进制是不是要转为图片，这个就是misc的超级大脑洞了。如果需要的话，得先把二进制转为十六进制，这种工具网上一大堆。然后再把转化完的十六进制码放到十六进制编译器里，我用的是winhex，然后通过文件头尾判断是上面文件，然后保存为一个对应的文件，打开就欧克了。<br>最后我想说，misc所需要的脑洞真的打的离谱，出题人可能把flag放在任何一个地方，这就是最恐怖的地方了。不过越挑战就越快乐。说实话，刷题确实快乐。misc中的进制转化还有很多，我还在探索，这些都是比较基础的，注意的就是要记清楚各种常见的编码的特点。保证能很快知道是什么编码，才能最快的知道要进行什么操作。我还要加油，任重道远。</li>
+<li><p>PHP语言介绍<br>外文名PHP：Hypertext Preprocessor，中文名：“超文本预处理器”是一种通用开源脚本语言。语法吸收了C语言、java和Perl的特点，主要适用于web开发领域。</p>
+</li>
+<li><p>PHP的基本框架</p>
+</li>
 </ol>
+<p>  ``bash</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">?&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.PHP的变量</p>
+<p>PHP的变量是以$开始，后面跟变量名称。而变量名必须以字母或者下滑线字符开始。</p>
 
       </section>
 
@@ -151,28 +157,14 @@
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2021/10/30/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%992/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">图片隐写2</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/10/21/%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">图片隐写</h2>
+        <a href="/2021/11/03/c%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%8C%87%E9%92%88/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">c语言学习之指针</h2>
         </a>
       
       <div class="card-text--row">Older</div>
